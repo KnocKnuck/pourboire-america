@@ -1,4 +1,4 @@
-setwd("D:/One Drive/OneDrive/Univ Joseph/Universit� Lille 3 - MIASHS/Master 1 SID/Semestre 2/Visualisation de l'information - FRAISSE/LAVIGNE/TD 3-20171012")
+setwd("_______ Your____Path_____")
 table=read.table('Tips.csv', sep=';',dec='.', header = TRUE)
 
 head(table)
@@ -21,7 +21,7 @@ y = table$TIP
 plot(x,y)
 
 cor(table$TOTBILL, table$TIP)
-"Quand le prix augmente le pourboir augmente, plus c'est proche de 1 plus c'est correlé" 
+"Quand le prix augmente le pourboir augmente, plus c'est proche de 1 plus c'est correlÃ©" 
 cor.test(table$TOTBILL, table$TIP)
 "Il y a une relation de correlation croissante entre le pourboir et le prix"
 
@@ -30,11 +30,11 @@ plot(table$TOTBILL, table$PTIP)
 
 "PARTIE 3"
 
-"Y1,...Yny : MOntant en % des pourboires des clients en journée
-X1,...,Xny : MOntant en % des pourvoires des clients en journée
-2 échantillons indépendants càd non appariés
-Xi indépendant E(Xi) = mux  
-Yi indépendant E(Yi = muy 
+"Y1,...Yny : MOntant en % des pourboires des clients en journÃ©e
+X1,...,Xny : MOntant en % des pourvoires des clients en journÃ©e
+2 Ã©chantillons indÃ©pendants cÃ d non appariÃ©s
+Xi indÃ©pendant E(Xi) = mux  
+Yi indÃ©pendant E(Yi = muy 
 On teste H0 = {mux = muy} et H1 {mux \dif mux}
 On va utiliser le test de Student de comparaison de moyenne
 Soit Yi et Xi ~N(......)
@@ -50,9 +50,9 @@ hist(soir)
 which(table$PTIP > 0.6)
 
 var.test(jour,soir)
-"Demander pour l'explication de df, denom df et F et comment l'interpreté
-Probabilité critique pc = 0.098, si c'était pc < alpha = 0.05
-Donc on rejette H0, les 2 variances ne sont pas égales"
+"Demander pour l'explication de df, denom df et F et comment l'interpretÃ©
+ProbabilitÃ© critique pc = 0.098, si c'Ã©tait pc < alpha = 0.05
+Donc on rejette H0, les 2 variances ne sont pas Ã©gales"
 
 t.test(jour,soir, alternative = "two.sided", paired = FALSE, var.equal = FALSE)
 ?t.test
